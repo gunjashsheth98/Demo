@@ -1,0 +1,47 @@
+<div class="container mt-5">
+  <h1 class="text-center">Customer</h1>
+  <div class="row">
+    <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Profile Pic</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor = "let d of abc;let i =index;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{d.name}}</td>
+      <td>{{d.age}}</td>
+      <td>{{d.gender}}</td>
+      <td><img src="{{d.img}}" width=50 height=50></td>
+      <td>{{d.date}}</td>
+      <td>{{d.status}}</td>
+    </tr>
+    <tr *ngFor = "let d of abc2;let i =index;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{d.name}}</td>
+      <td>{{d.age}}</td>
+      <td>{{d.gender}}</td>
+      <td><img src="{{d.img}}" width=50 height=50></td>
+      <td>{{d.date}}</td>
+      <td>{{d.status}}</td>
+    </tr>
+    <tr *ngFor = "let d of abc3;let i =index;">
+      <th scope="row">{{i+1}}</th>
+      <td>{{d.name}}</td>
+      <td>{{d.age}}</td>
+      <td>{{d.gender}}</td>
+      <td><img src="{{d.img}}" width=50 height=50></td>
+      <td>{{d.date}}</td>
+      <td>{{d.status}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
