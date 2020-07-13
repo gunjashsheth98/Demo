@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Data } from 'src/app/data';
 import { DatePipe, formatDate } from '@angular/common';
-import moment from 'moment';
+import * as moment from 'moment';
 import * as _ from "lodash";
 
 @Component({
@@ -38,14 +38,14 @@ export class AppComponent implements OnInit{
       for(let a of this.abc2){
         a.date = moment(a.date,"DD/MM/YYYY").format('DD/MM/YYYY');
       }
-      this.abc2 = _.sortBy(this.abc2, function(o) { return new moment(o.date,"DD/MM/YYYY"); }, ['asc']);
+      this.abc2 = _.sortBy(this.abc2, function(o) { return moment(o.date,"DD/MM/YYYY"); }, ['asc']);
       this.abc3 = this.data.filter((b)=>{
         return b.status == 'onboarded';
       });
       for(let a of this.abc3){
         a.date = moment(a.date,"DD/MM/YYYY").format('DD/MM/YYYY');
       }
-      this.abc3 = _.sortBy(this.abc3, function(o) { return new moment(o.date,"DD/MM/YYYY"); }, ['asc']);
+      this.abc3 = _.sortBy(this.abc3, function(o) { return moment(o.date,"DD/MM/YYYY"); }, ['asc']);
     });
   }
 }
